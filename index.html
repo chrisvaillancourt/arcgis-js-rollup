@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Map Thingy</title>
+    <!-- <link rel="stylesheet" href="/path/to/my.css" media="print" onload="this.media='all'"> -->
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.15/esri/themes/light/main.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      var locationPath = location.pathname.replace(/\/[^\/]+$/, '');
+      window.dojoConfig = {
+        packages: [
+          {
+            name: 'app',
+            location: locationPath,
+          },
+        ],
+        deps: ['app/index'],
+      };
+    </script>
+    <script defer src="https://js.arcgis.com/4.15/"></script>
+  </head>
+  <body>
+    <noscript> JavaScript is required in order to use this app </noscript>
+    <div id="viewDiv"></div>
+  </body>
+</html>
